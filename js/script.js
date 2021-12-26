@@ -21,7 +21,8 @@ function posicaoRandomica() {
     var posicaoY = Math.floor(Math.random() * altura) -90 // -90 para a imagem não passar e ser cortada
 
     posicaoX = posicaoX  < 0 ? 0 : posicaoX //verifica se a posição X é 0, se for ela vai continuar 0,  
-    posicaoY = posicaoY  < 0 ? 0 : posicaoY //se não fica no valor que ela tava mesmo
+    posicaoY = posicaoY  < 0 ? 0 : posicaoY //se não fica no valor que ela tava mesmo  
+    
     console.log(posicaoX, posicaoY)
 
     //criar o elemento hmtl
