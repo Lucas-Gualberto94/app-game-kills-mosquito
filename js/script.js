@@ -15,7 +15,22 @@ ajustaTamanhoPalcoJogo()
 
 //criando posições randômicas
 
-var posicaoX = Math.random()
-var posicaoY = Math.random()
+function posicaoRandomica() {
 
-console.log(posicaoX, posicaoY)
+    var posicaoX = Math.floor(Math.random() * largura) -90 //math.floor tira as casas decimais
+    var posicaoY = Math.floor(Math.random() * altura) -90 // -90 para a imagem não passar e ser cortada
+
+    posicaoX = posicaoX  < 0 ? 0 : posicaoX //verifica se a posição X é 0, se for ela vai continuar 0,  
+    posicaoY = posicaoY  < 0 ? 0 : posicaoY //se não fica no valor que ela tava mesmo
+    console.log(posicaoX, posicaoY)
+
+    //criar o elemento hmtl
+    var mosca = document.createElement('img')
+    mosca.src = 'imagens/mosca.png'
+    mosca.className = 'mosca1'
+    mosca.style.left = posicaoX +'px'
+    mosca.style.top = posicaoY +'px'
+    mosca.style.position = 'absolute'
+
+    document.body.appendChild(mosca)
+}
